@@ -1,0 +1,51 @@
+/**
+ * This is a valid class.
+ */
+
+public class ValidClass {
+  int arr[] = new int[25];
+  public ValidClass() {
+    init();
+  }
+  public void init() {
+    for (int k = 0; k < arr.length; k++)
+      arr[k] = 10;
+  }
+}
+This file has balanced braces
+
+----------------------------------------------------
+
+/**
+ * This class has an unmatched brace.
+ */
+
+public class UnmatchedBrace {
+  int arr[] = new int[25];
+  public UnmatchedBrace() {
+    init();
+  }
+  public void init() {
+    for (int k = 0; k < arr.length; k++)
+      arr[k} = 10;
+  }
+}
+Error: unmatched brace } at character 223, line 12: Found } expected [
+
+----------------------------------------------------
+
+/**
+ * This class has a missing brace.
+ */
+
+public class MissingBrace }
+  int arr[] = new int[25];
+  public MissingBrace() {
+    init();
+  }
+  public void init() {
+    for (int k = 0; k < arr.length; k++)
+      arr[k] = 10;
+  }
+}
+Error: brace } at character 70, line 5 does not match anything in the file
